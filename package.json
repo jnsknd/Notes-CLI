@@ -1,0 +1,14 @@
+{
+    "name": "notes-cli",
+    "version": "1.0.0",
+    "main": "index.js",
+    "bin": {
+        "notes-cli": "./index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Joan Skenderi (based on tutorial by Scott Moss)",
+    "license": "ISC",
+    "description": "A command-line interface for creating, managing, and organizing notes with tag support and a web interface"
+}
