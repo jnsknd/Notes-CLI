@@ -7,12 +7,15 @@
         "notes-cli": "./index.js"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
     },
     "author": "Joan Skenderi (based on tutorial by Scott Moss)",
     "license": "ISC",
     "description": "A command-line interface for creating, managing, and organizing notes with tag support and a web interface",
     "dependencies": {
         "yargs": "^17.7.2"
+    },
+    "devDependencies": {
+        "jest": "^29.5.0"
     }
 }

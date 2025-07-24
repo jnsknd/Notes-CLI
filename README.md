@@ -16,6 +16,14 @@ npm install
 npm link
 ```
 
+## Testing
+
+### Run Tests
+
+```bash
+npm test
+```
+
 ## Help
 
 ```bash
