@@ -29,6 +29,21 @@ const createServer = (notes) => {
     return http.createServer(async (req, res) => {
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = path.dirname(__filename);
+
+        if (req.url === '/css/styles.css' || req.url === '../css/styles.css') {
+            try {
+                const CSS_PATH = path.join(__dirname, 'css', 'styles.css');
+                const css = await fs.readFile(CSS_PATH, 'utf-8');
+                res.writeHead(200, { 'Content-Type': 'text/css' });
+                res.end(css);
+                return;
+            } catch (error) {
+                res.writeHead(404, { 'Content-Type': 'text/plain' });
+                res.end('CSS file not found');
+                return;
+            }
+        }
+
         const HTML_PATH = path.join(__dirname, 'templates', 'template.html');
         const template = await fs.readFile(HTML_PATH, 'utf-8');
         const html = interpolate(template, { notes: formatNotes(notes) });
