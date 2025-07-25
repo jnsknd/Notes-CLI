@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const DB_PATH = path.join(
     path.dirname(fileURLToPath(import.meta.url)),
     '..',
+    '..',
     'db.json'
 );
 

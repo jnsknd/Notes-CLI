@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import './src/command.js';
+import './src/commands/index.js';

@@ -1,12 +1,12 @@
 import { expect, jest } from '@jest/globals';
 
-jest.unstable_mockModule('../src/db.js', () => ({
+jest.unstable_mockModule('../src/database/db.js', () => ({
     insertDB: jest.fn(),
     getDB: jest.fn(),
     saveDB: jest.fn(),
 }));
 
-const { getDB, insertDB, saveDB } = await import('../src/db.js');
+const { getDB, insertDB, saveDB } = await import('../src/database/db.js');
 const { getAllNotes, newNote, removeNote } = await import('../src/notes.js');
 
 beforeEach(() => {
