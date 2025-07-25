@@ -2,6 +2,27 @@
 
 A command-line interface for creating, managing, and organizing notes with tag support and a web interface
 
+## Project Structure
+
+```
+notes-cli/
+├── __tests__/             # Test suites
+├── src/                   # Source code
+│   ├── commands/          # Command implementations
+│   ├── database/          # Database operations
+│   ├── utils/             # Helper utilities
+│   └── web/               # Web server and interface
+│       ├── css/           # Stylesheets
+│       └── templates/     # HTML templates
+├── .gitignore             # Ignored files
+├── .prettierrc            # Code formatting config
+├── db.json                # JSON database
+├── index.js               # Main entry point
+├── package-lock.json      # Dependency lock file
+├── package.json           # Dependencies
+└── README.md              # Project documentation
+```
+
 ## Setup
 
 ### Install Dependencies
