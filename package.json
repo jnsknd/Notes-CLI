@@ -7,7 +7,8 @@
         "notes-cli": "./index.js"
     },
     "scripts": {
-        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
     },
     "author": "Joan Skenderi (based on tutorial by Scott Moss)",
     "license": "ISC",

@@ -18,10 +18,22 @@ npm link
 
 ## Testing
 
-### Run Tests
+### Run All Tests
 
 ```bash
 npm test
+```
+
+### Run a Single Test File
+
+```bash
+npm test <file-name>
+```
+
+### Run Tests with Coverage
+
+```bash
+npm run test:coverage
 ```
 
 ## Help
