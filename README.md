@@ -57,6 +57,15 @@ notes-cli remove <note-id>
 notes-cli clean
 ```
 
+## Web Interface
+
+```bash
+notes-cli web
+
+# Start on a specific port
+notes-cli web <port-number>
+```
+
 ## Testing
 
 ### Run All Tests
