@@ -22,6 +22,41 @@ npm link
 notes-cli --help
 ```
 
+## Usage
+
+### Create a New Note
+
+```bash
+notes-cli new "<note-content>"
+
+# Note with tags
+notes-cli new "<note-content>" --tags "<tag1,tag2,tag3>"
+```
+
+### View All Notes
+
+```bash
+notes-cli all
+```
+
+### Search Notes
+
+```bash
+notes-cli find "<search-term>"
+```
+
+### Remove a Note
+
+```bash
+notes-cli remove <note-id>
+```
+
+### Clear All Notes
+
+```bash
+notes-cli clean
+```
+
 ## Attribution
 
 This project was created as part of the [Introduction to Node.js, v3](https://frontendmasters.com/courses/node-js-v3/) course on Frontend Masters. The original course content has been adapted and expanded upon. This repository is intended for educational purposes and portfolio demonstration.
