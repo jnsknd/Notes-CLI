@@ -1,24 +1,90 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body,
 html {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    padding: 2rem 0;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.main {
+    flex: 1;
+    padding: 3rem 0;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .note {
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    position: relative;
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.note:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .note p {
-    font-size: 24px;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.note p:last-child {
+    margin-bottom: 0;
 }
 
 .tag {
-    margin: 0 10px;
-    padding: 4px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: salmon;
+    display: inline-block;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+    background: #2563eb;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.notes:empty::after {
+    content: 'No notes found.';
+    text-align: center;
 }
